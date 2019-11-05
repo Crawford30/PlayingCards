@@ -140,6 +140,11 @@ class PlayingCardView: UIView {
         RoundedRectPath.fill()
         RoundedRectPath.close()
         
+        //DRAWING IMAGES(should add image in the assets folder
+        if let faceCardImage = UIImage(named: rankString+suit) {
+            faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImagesizeToBoundSize))
+        }
+        
     }
     
 
